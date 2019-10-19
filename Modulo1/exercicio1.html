@@ -20,6 +20,33 @@
     };
     const retorno = `O usuário mora em ${endereco.cidade} / ${endereco.uf}, no bairro ${endereco.bairro}, na rua ${endereco.rua} com nº ${endereco.numero}`;
     console.log(retorno);
+
+
+    //Exercicio 2
+    function pares(x, y) {
+      let inicio;
+      let fim;
+
+      if (x > y) {
+        inicio = y;
+        fim = x
+      } else {
+        inicio = x;
+        fim = y;
+      }
+
+      for (let i = inicio; i <= fim; i++) {
+        if (i % 2 === 0) {
+          console.log(i);
+        }
+
+      }
+    }
+    console.log("x sendo > que y");
+    pares(10, 1);
+    console.log("x sendo < que y ");
+    pares(1,10);
+
   </script>
 </body>
 
