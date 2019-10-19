@@ -79,8 +79,22 @@
       }
 
     }
-    var anosEstudo = 0.7;
+    let anosEstudo = 0.7;
     experiencia(anosEstudo);
+    
+    let usuarios = [
+      {
+        nome: "Diego",
+        habilidades: ["Javascript", "ReactJS", "Redux"]
+      },
+      {
+        nome: "Gabriel",
+        habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+      }
+    ];
+    const retornoUser = usuarios.forEach(item => console.log(`O ${item.nome} possui as habilidades: ${item.habilidades.join(",")}`) )
+  
+
   </script>
 </body>
 
