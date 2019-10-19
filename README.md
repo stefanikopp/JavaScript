@@ -1,2 +1,2 @@
 # JavaScript
-Exercícios de fixação de JavaScript
+Exercícios de fixação JavaScript
