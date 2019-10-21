@@ -13,37 +13,51 @@
 
   <div id="quadrado"></div>
 
+  <ul>
+  </ul>
+
   <script>
 
-    var btnElement = document.getElementById('novo');
-    var quadradosElemento = document.getElementById('quadrado');
+    //Exercicio 1 e 2
+    let btnElement = document.getElementById('novo');
+    let quadradosElemento = document.getElementById('quadrado');
 
 
     function getRandomColor() {
-      var letters = "0123456789ABCDEF";
-      var color = "#";
-      for (var i = 0; i < 6; i++) {
+      let letters = "0123456789ABCDEF";
+      let color = "#";
+      for (let i = 0; i < 6; i++) {
         color += letters[Math.floor(Math.random() * 16)];
       }
       return color;
     }
 
-    btnElement.onclick = function () {
+    btnElement.onclick = () => {
 
-      var quadrado = document.createElement('div');
+      let quadrado = document.createElement('div');
 
       quadrado.style.width = '100px';
       quadrado.style.height = '100px';
       quadrado.style.backgroundColor = '#F00';
 
-      quadrado.onmouseover = function(){
-        quadrado.style.background =getRandomColor();
+      quadrado.onmouseover = () => {
+        quadrado.style.background = getRandomColor();
       }
-      
+
       quadradosElemento.appendChild(quadrado);
     }
 
+    //Exercicio 3
+    let nomes = ["Diego", "Gabriel", "Lucas"];
 
+    let listElement = document.querySelector('ul');
+
+    for (nome of nomes) {
+      let liElement = document.createElement('li');
+      let textElement = document.createTextNode(nome);
+      liElement.appendChild(textElement);
+      listElement.appendChild(liElement);
+    }
 
   </script>
 
