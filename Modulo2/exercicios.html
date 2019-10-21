@@ -16,6 +16,9 @@
   <ul>
   </ul>
 
+  <input type="text" name="nome">
+  <button onClick="adicionar()">Adicionar</button>
+
   <script>
 
     //Exercicio 1 e 2
@@ -48,15 +51,25 @@
     }
 
     //Exercicio 3
-    let nomes = ["Diego", "Gabriel", "Lucas"];
+     let nomes = ['Diego', 'Gabriel', 'Lucas'];
 
     let listElement = document.querySelector('ul');
+    let inputElement = document.querySelector('input');
 
-    for (nome of nomes) {
+    function addItem(text) {
       let liElement = document.createElement('li');
-      let textElement = document.createTextNode(nome);
+      let textElement = document.createTextNode(text);
       liElement.appendChild(textElement);
       listElement.appendChild(liElement);
+    }
+    //Exercicio 4
+    function adicionar() {
+      addItem(inputElement.value);
+      inputElement.value = "";
+    }
+
+    for (nome of nomes) {
+      addItem(nome);
     }
 
   </script>
